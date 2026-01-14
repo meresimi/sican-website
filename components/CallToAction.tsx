@@ -53,7 +53,7 @@ export default function CallToAction() {
       <div className="container-custom relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-            "JOINEM FAET!"
+            "JOINEM FAIT IA"
           </h2>
           <p className="text-xl text-orange-100">(Join the Fight!)</p>
           <p className="text-lg mt-4 max-w-2xl mx-auto text-orange-50">

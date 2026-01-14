@@ -38,7 +38,7 @@ export default function AboutPreview() {
               About SICAN
             </div>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-ocean mb-6">
-              "MI STAP HU?"
+              "HU NA MIFALA?"
               <span className="block text-2xl text-gray-600 mt-2">(Who Are We?)</span>
             </h2>
             

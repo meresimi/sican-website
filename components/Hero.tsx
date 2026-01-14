@@ -21,7 +21,7 @@ export default function Hero() {
 
             {/* Pijin Tagline */}
             <div className="text-2xl md:text-3xl font-medium text-blue-100 mb-4">
-              "Waka Tagio mo Klaemet Jenis"
+              "Kam up tugeda fo klaemet jens"
             </div>
 
             {/* English Tagline */}

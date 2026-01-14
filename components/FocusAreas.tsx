@@ -10,7 +10,8 @@ export default function FocusAreas() {
       ),
       title: "Climate Finance Tracking",
       description: "Following the money to ensure climate funds reach the communities that need them most.",
-      color: "from-ocean to-lagoon"
+      color: "from-ocean to-lagoon",
+      link: "/work/climate-finance"
     },
     {
       icon: (
@@ -20,7 +21,8 @@ export default function FocusAreas() {
       ),
       title: "Community Empowerment",
       description: "Building capacity and resilience in communities across all nine provinces of Solomon Islands.",
-      color: "from-forest to-forest-light"
+      color: "from-forest to-forest-light",
+      link: "/work/community-empowerment"
     },
     {
       icon: (
@@ -30,7 +32,8 @@ export default function FocusAreas() {
       ),
       title: "Policy Advocacy",
       description: "Influencing climate policy at national, regional, and international levels to ensure justice.",
-      color: "from-coral to-orange-500"
+      color: "from-coral to-orange-500",
+      link: "/work/policy-advocacy"
     },
     {
       icon: (
@@ -40,7 +43,8 @@ export default function FocusAreas() {
       ),
       title: "Youth Leadership",
       description: "Empowering the next generation of climate leaders to shape Solomon Islands' future.",
-      color: "from-lagoon to-teal-500"
+      color: "from-lagoon to-teal-500",
+      link: "/work/youth-leadership"
     },
     {
       icon: (
@@ -50,7 +54,8 @@ export default function FocusAreas() {
       ),
       title: "Regional Collaboration",
       description: "Working with PICAN and Pacific partners for coordinated climate action across the region.",
-      color: "from-blue-600 to-indigo-600"
+      color: "from-blue-600 to-indigo-600",
+      link: "/work/regional-collaboration"
     },
     {
       icon: (
@@ -60,7 +65,8 @@ export default function FocusAreas() {
       ),
       title: "Climate Justice",
       description: "Fighting for fairness and equity in climate action, centering the voices of those most affected.",
-      color: "from-climate-red to-red-600"
+      color: "from-climate-red to-red-600",
+      link: "/work/climate-justice"
     },
   ]
 
@@ -69,7 +75,7 @@ export default function FocusAreas() {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-ocean mb-4">
-            "WANEM MIFALA MEKEM"
+            "WAT MIFALA DUIM"
           </h2>
           <p className="text-xl text-gray-600">(What We Do)</p>
         </div>
@@ -92,12 +98,15 @@ export default function FocusAreas() {
                 </p>
               </div>
               <div className="px-8 pb-8">
-                <div className="inline-flex items-center text-coral group-hover:text-coral-dark transition-colors font-semibold text-sm">
+                <Link 
+                  href={area.link}
+                  className="inline-flex items-center text-coral group-hover:text-coral-dark transition-colors font-semibold text-sm"
+                >
                   Learn more 
                   <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </div>
+                </Link>
               </div>
             </div>
           ))}
