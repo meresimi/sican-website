@@ -14,10 +14,10 @@ export default function Header() {
   return (
     <header className="bg-ocean shadow-lg sticky top-0 z-50">
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-20 md:h-24 lg:h-28 relative px-4">
+        <div className="flex items-center justify-between h-20 md:h-24 lg:h-28 relative">
           
-          {/* LEFT: SICAN Logo (Circular Icon) */}
-          <Link href="/" className="z-20">
+          {/* LEFT: SICAN Logo - 10px left margin */}
+          <Link href="/" className="z-20 ml-[10px]">
             <Image
               src="/images/sican-icon.svg"
               alt="SICAN Logo"
@@ -28,7 +28,7 @@ export default function Header() {
             />
           </Link>
 
-          {/* CENTER: Large "SICAN" Text (Like Screenshot) */}
+          {/* CENTER: Large "SICAN" Text - Absolutely centered */}
           <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-wider font-heading drop-shadow-lg" style={{
               fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif',
@@ -40,7 +40,7 @@ export default function Header() {
           </div>
 
           {/* RIGHT: Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 z-20">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 z-20 mr-[10px]">
             <Link 
               href="/" 
               className="text-white hover:text-blue-200 transition-colors font-medium"
@@ -67,10 +67,10 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* RIGHT: Hamburger Menu (Mobile) - Like Screenshot */}
+          {/* RIGHT: Hamburger Menu - 10px right margin */}
           <button
             onClick={toggleMenu}
-            className="md:hidden z-20 p-2 rounded-md hover:bg-ocean-dark transition-colors"
+            className="md:hidden z-20 p-2 rounded-md hover:bg-ocean-dark transition-colors mr-[10px]"
             aria-label="Toggle menu"
           >
             <div className="flex flex-col gap-1.5">
