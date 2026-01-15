@@ -14,103 +14,70 @@ export default function Header() {
   return (
     <header className="bg-ocean shadow-lg sticky top-0 z-50">
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-[200px] md:h-[248px] lg:h-[296px] relative">
+        <div className="flex items-center justify-between h-20 md:h-24 lg:h-28 relative px-4">
           
-          {/* LEFT: SICAN Logo - Increased to match new header size */}
-          <Link href="/" className="flex items-center space-x-3 z-20">
+          {/* LEFT: SICAN Logo (Circular Icon) */}
+          <Link href="/" className="z-20">
             <Image
               src="/images/sican-icon.svg"
               alt="SICAN Logo"
-              width={30}
-              height={30}
-              className="h-[180px] w-[180px] md:h-[228px] md:w-[228px] lg:h-[276px] lg:w-[276px] filter drop-shadow-md"
+              width={80}
+              height={80}
+              className="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter drop-shadow-md hover:scale-105 transition-transform"
               priority
             />
-            <div className="hidden lg:block">
-              <div className="font-heading font-bold text-white text-xl">
-                SICAN
-              </div>
-              <div className="text-sm text-blue-100">
-                Climate Action
-              </div>
-            </div>
           </Link>
 
-          {/* CENTER: Solomon Islands Flag - MASSIVELY ENLARGED (200% increase = 3x size) */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 z-10 flex items-center h-full py-[10px]">
-            <Image
-              src="/images/sican-si-flag.svg"
-              alt="Solomon Islands Flag"
-              width={100}
-              height={75}
-              className="h-full w-auto drop-shadow-xl"
-              style={{ objectFit: 'contain' }}
-            />
+          {/* CENTER: Large "SICAN" Text (Like Screenshot) */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-wider font-heading drop-shadow-lg" style={{
+              fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif',
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+              letterSpacing: '0.1em'
+            }}>
+              SICAN
+            </h1>
           </div>
 
           {/* RIGHT: Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8 z-20">
             <Link 
               href="/" 
-              className="text-white hover:text-blue-200 transition-colors font-medium text-lg"
+              className="text-white hover:text-blue-200 transition-colors font-medium"
             >
               Home
             </Link>
             <Link 
               href="/about" 
-              className="text-white hover:text-blue-200 transition-colors font-medium text-lg"
+              className="text-white hover:text-blue-200 transition-colors font-medium"
             >
               About
             </Link>
             <Link 
               href="/work" 
-              className="text-white hover:text-blue-200 transition-colors font-medium text-lg"
+              className="text-white hover:text-blue-200 transition-colors font-medium"
             >
               Our Work
             </Link>
             <Link 
               href="/contact" 
-              className="text-white hover:text-blue-200 transition-colors font-medium text-lg"
+              className="text-white hover:text-blue-200 transition-colors font-medium"
             >
               Contact
             </Link>
           </div>
 
-          {/* RIGHT: Hamburger Menu (Mobile) */}
+          {/* RIGHT: Hamburger Menu (Mobile) - Like Screenshot */}
           <button
             onClick={toggleMenu}
             className="md:hidden z-20 p-2 rounded-md hover:bg-ocean-dark transition-colors"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? (
-              <svg 
-                className="w-10 h-10 text-white" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M6 18L18 6M6 6l12 12" 
-                />
-              </svg>
-            ) : (
-              <svg 
-                className="w-10 h-10 text-white" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M4 6h16M4 12h16M4 18h16" 
-                />
-              </svg>
-            )}
+            <div className="flex flex-col gap-1.5">
+              <span className="block w-8 h-1 bg-white rounded"></span>
+              <span className="block w-8 h-1 bg-white rounded"></span>
+              <span className="block w-8 h-1 bg-white rounded"></span>
+            </div>
           </button>
         </div>
 
@@ -121,28 +88,28 @@ export default function Header() {
               <Link
                 href="/"
                 onClick={toggleMenu}
-                className="px-4 py-3 text-white hover:bg-ocean hover:text-blue-100 transition-colors text-lg"
+                className="px-6 py-3 text-white hover:bg-ocean hover:text-blue-100 transition-colors text-lg"
               >
                 Home
               </Link>
               <Link
                 href="/about"
                 onClick={toggleMenu}
-                className="px-4 py-3 text-white hover:bg-ocean hover:text-blue-100 transition-colors text-lg"
+                className="px-6 py-3 text-white hover:bg-ocean hover:text-blue-100 transition-colors text-lg"
               >
                 About
               </Link>
               <Link
                 href="/work"
                 onClick={toggleMenu}
-                className="px-4 py-3 text-white hover:bg-ocean hover:text-blue-100 transition-colors text-lg"
+                className="px-6 py-3 text-white hover:bg-ocean hover:text-blue-100 transition-colors text-lg"
               >
                 Our Work
               </Link>
               <Link
                 href="/contact"
                 onClick={toggleMenu}
-                className="px-4 py-3 text-white hover:bg-ocean hover:text-blue-100 transition-colors text-lg"
+                className="px-6 py-3 text-white hover:bg-ocean hover:text-blue-100 transition-colors text-lg"
               >
                 Contact
               </Link>
