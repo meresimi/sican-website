@@ -13,10 +13,11 @@ export default function Header() {
 
   return (
     <header className="bg-ocean shadow-lg sticky top-0 z-50">
-      <nav className="container-custom">
+      {/* Remove container-custom padding for mobile edge-to-edge layout */}
+      <nav className="px-0 md:px-4 lg:px-8 max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-20 md:h-24 lg:h-28 relative">
           
-          {/* LEFT: SICAN Logo - 3px left margin on mobile */}
+          {/* LEFT: SICAN Logo - 3px from left screen edge on mobile */}
           <Link href="/" className="z-20 ml-[3px] md:ml-4">
             <Image
               src="/images/sican-icon.svg"
@@ -67,7 +68,7 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* RIGHT: Hamburger Menu - 3px right margin on mobile */}
+          {/* RIGHT: Hamburger Menu - 3px from right screen edge on mobile */}
           <button
             onClick={toggleMenu}
             className="md:hidden z-20 p-2 rounded-md hover:bg-ocean-dark transition-colors mr-[3px]"
