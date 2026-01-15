@@ -14,9 +14,9 @@ export default function Header() {
   return (
     <header className="bg-ocean shadow-lg sticky top-0 z-50">
       <nav className="container-custom">
-        <div className="flex items-center justify-between py-[5px] relative">
+        <div className="flex items-center justify-between h-20 md:h-24 lg:h-28 relative">
           
-          {/* LEFT: SICAN Logo - Increased height */}
+          {/* LEFT: SICAN Logo */}
           <Link href="/" className="flex items-center space-x-3 z-20">
             <Image
               src="/images/sican-icon.svg"
@@ -36,14 +36,15 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* CENTER: Solomon Islands Flag - Increased height */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+          {/* CENTER: Solomon Islands Flag - ENLARGED */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 z-10 flex items-center h-full py-[10px]">
             <Image
               src="/images/sican-si-flag.svg"
               alt="Solomon Islands Flag"
-              width={100}
-              height={75}
-              className="h-14 w-auto md:h-16 lg:h-20 drop-shadow-md"
+              width={150}
+              height={100}
+              className="h-full w-auto drop-shadow-lg"
+              style={{ objectFit: 'contain' }}
             />
           </div>
 
