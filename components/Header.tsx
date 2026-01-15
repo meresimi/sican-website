@@ -14,20 +14,20 @@ export default function Header() {
   return (
     <header className="bg-ocean shadow-lg sticky top-0 z-50">
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-16 md:h-20 relative">
+        <div className="flex items-center justify-between py-[5px] relative">
           
-          {/* LEFT: SICAN Logo */}
+          {/* LEFT: SICAN Logo - Increased height */}
           <Link href="/" className="flex items-center space-x-3 z-20">
             <Image
               src="/images/sican-icon.svg"
               alt="SICAN Logo"
-              width={48}
-              height={48}
-              className="h-10 w-10 md:h-12 md:w-12 filter drop-shadow-md"
+              width={60}
+              height={60}
+              className="h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 filter drop-shadow-md"
               priority
             />
             <div className="hidden sm:block">
-              <div className="font-heading font-bold text-white text-sm md:text-base">
+              <div className="font-heading font-bold text-white text-sm md:text-base lg:text-lg">
                 SICAN
               </div>
               <div className="text-xs text-blue-100">
@@ -36,14 +36,14 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* CENTER: Solomon Islands Flag */}
+          {/* CENTER: Solomon Islands Flag - Increased height */}
           <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
             <Image
               src="/images/sican-si-flag.svg"
               alt="Solomon Islands Flag"
-              width={80}
-              height={60}
-              className="h-8 w-auto md:h-10 drop-shadow-md"
+              width={100}
+              height={75}
+              className="h-14 w-auto md:h-16 lg:h-20 drop-shadow-md"
             />
           </div>
 
@@ -83,7 +83,7 @@ export default function Header() {
           >
             {isMenuOpen ? (
               <svg 
-                className="w-6 h-6 text-white" 
+                className="w-7 h-7 text-white" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -97,7 +97,7 @@ export default function Header() {
               </svg>
             ) : (
               <svg 
-                className="w-6 h-6 text-white" 
+                className="w-7 h-7 text-white" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
