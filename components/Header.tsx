@@ -21,8 +21,8 @@ export default function Header() {
             <Image
               src="/images/sican-icon.svg"
               alt="SICAN Logo"
-              width={150}
-              height={150}
+              width={30}
+              height={30}
               className="h-[180px] w-[180px] md:h-[228px] md:w-[228px] lg:h-[276px] lg:w-[276px] filter drop-shadow-md"
               priority
             />
@@ -41,8 +41,8 @@ export default function Header() {
             <Image
               src="/images/sican-si-flag.svg"
               alt="Solomon Islands Flag"
-              width={400}
-              height={300}
+              width={100}
+              height={75}
               className="h-full w-auto drop-shadow-xl"
               style={{ objectFit: 'contain' }}
             />
