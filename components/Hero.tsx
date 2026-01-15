@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -14,6 +15,19 @@ export default function Hero() {
       <div className="container-custom relative z-10">
         <div className="py-20 md:py-32 lg:py-40">
           <div className="max-w-4xl mx-auto text-center">
+            
+            {/* SICAN Logo */}
+            <div className="mb-8 flex justify-center">
+              <Image
+                src="/images/sican-icon.svg"
+                alt="SICAN Logo"
+                width={120}
+                height={120}
+                className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 drop-shadow-lg"
+                priority
+              />
+            </div>
+
             {/* Main Heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Solomon Islands Climate Action Network
