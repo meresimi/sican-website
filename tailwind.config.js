@@ -13,8 +13,11 @@ module.exports = {
           light: '#22D3EE',
           dark: '#0E7490',
         },
+        coral: {
+          DEFAULT: '#F97316',
+          dark: '#EA580C',
+        },
         forest: '#10B981',
-        coral: '#F97316',
         sand: '#FDE68A',
         lagoon: '#06B6D4',
       },
