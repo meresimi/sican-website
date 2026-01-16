@@ -21,36 +21,36 @@ export default function Hero() {
               Solomon Islands Climate Action Network
             </h1>
 
-            {/* Pijin Tagline - UPDATED */}
+            {/* Pijin Tagline - CORRECTED */}
             <div className="text-2xl md:text-3xl font-medium text-blue-100 mb-4">
-              "Waka Tagio mo Klaemet Jenis"
+              "Waka Tugeda fo Klaemet Jastis"
             </div>
 
-            {/* English Tagline - UPDATED */}
+            {/* English Tagline */}
             <div className="text-xl md:text-2xl text-blue-200 mb-8">
               Working Together for Climate Justice
             </div>
 
-            {/* Description - UPDATED from resource documents */}
+            {/* Description */}
             <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed">
               SICAN is a network of civil society organizations, faith-based groups, and community leaders 
               united to address climate change in Solomon Islands. We work on climate finance tracking, 
               community empowerment, policy advocacy, and climate justice.
             </p>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons - WITH PIJIN */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/get-involved"
                 className="btn-primary w-full sm:w-auto text-center"
               >
-                Get Involved →
+                Joinim Mifala (Get Involved) →
               </Link>
               <Link
                 href="/our-story"
                 className="btn-outline w-full sm:w-auto text-center border-white text-white hover:bg-white hover:text-ocean"
               >
-                Learn Our Story
+                Stori Blo Mifala (Learn Our Story)
               </Link>
             </div>
 
