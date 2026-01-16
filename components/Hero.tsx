@@ -16,37 +16,26 @@ export default function Hero() {
         <div className="py-20 md:py-32 lg:py-40">
           <div className="max-w-4xl mx-auto text-center">
             
-            {/* SICAN Logo */}
-            <div className="mb-8 flex justify-center">
-              <Image
-                src="/images/sican-icon.svg"
-                alt="SICAN Logo"
-                width={120}
-                height={120}
-                className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 drop-shadow-lg"
-                priority
-              />
-            </div>
-
             {/* Main Heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
               Solomon Islands Climate Action Network
             </h1>
 
-            {/* Pijin Tagline */}
+            {/* Pijin Tagline - UPDATED */}
             <div className="text-2xl md:text-3xl font-medium text-blue-100 mb-4">
-              "Kam up tugeda fo klaemet jens"
+              "Waka Tagio mo Klaemet Jenis"
             </div>
 
-            {/* English Tagline */}
+            {/* English Tagline - UPDATED */}
             <div className="text-xl md:text-2xl text-blue-200 mb-8">
-              Rising Togetherness for Climate Change
+              Working Together for Climate Justice
             </div>
 
-            {/* Description */}
+            {/* Description - UPDATED from resource documents */}
             <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed">
-              We are 15 organizations united to protect our islands, our culture, and our future 
-              from the impacts of climate change through advocacy, community empowerment, and climate justice.
+              SICAN is a network of civil society organizations, faith-based groups, and community leaders 
+              united to address climate change in Solomon Islands. We work on climate finance tracking, 
+              community empowerment, policy advocacy, and climate justice.
             </p>
 
             {/* CTA Buttons */}
@@ -58,10 +47,10 @@ export default function Hero() {
                 Get Involved →
               </Link>
               <Link
-                href="/about"
+                href="/our-story"
                 className="btn-outline w-full sm:w-auto text-center border-white text-white hover:bg-white hover:text-ocean"
               >
-                Learn More
+                Learn Our Story
               </Link>
             </div>
 
