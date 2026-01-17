@@ -14,7 +14,7 @@ export default function Footer() {
             </p>
             
             <form 
-              action="https://formsubmit.co/winifred@oxfam.org.sb" 
+              action="https://formsubmit.co/sicannetwork@gmail.com" 
               method="POST"
               className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
             >
@@ -32,7 +32,7 @@ export default function Footer() {
                 type="submit"
                 className="btn-primary bg-white text-ocean hover:bg-gray-100 whitespace-nowrap px-8"
               >
-                Saenem Nem Blong Yu (Subscribe) →
+                Subscribe (Saenem Nem Blong Yu) →
               </button>
             </form>
             <p className="text-xs text-blue-200 mt-3">
@@ -81,7 +81,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a 
-                  href="https://www.instagram.com/sican2019" 
+                  href="https://www.instagram.com/can_solomonisland" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full transition-colors"
@@ -105,17 +105,17 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/our-story" className="text-gray-400 hover:text-white transition-colors">
-                    Stori Blo Mifala (Our Story)
+                    Our Story (Stori Blo Mifala)
                   </Link>
                 </li>
                 <li>
                   <Link href="/work" className="text-gray-400 hover:text-white transition-colors">
-                    Waka Mifala Duim (Our Work)
+                    Our Work (Waka Mifala Duim)
                   </Link>
                 </li>
                 <li>
                   <Link href="/impact" className="text-gray-400 hover:text-white transition-colors">
-                    Waka Wea Mifala Mekem (Our Impact)
+                    Our Impact (Waka Wea Mifala Mekem)
                   </Link>
                 </li>
                 <li>
@@ -128,11 +128,11 @@ export default function Footer() {
 
             {/* Get Involved */}
             <div>
-              <h4 className="font-bold text-lg mb-4">Joinim Mifala (Get Involved)</h4>
+              <h4 className="font-bold text-lg mb-4">Get Involved (Joinim Mifala)</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link href="/membership" className="text-gray-400 hover:text-white transition-colors">
-                    Membasip (Membership)
+                    Membership (Membasip)
                   </Link>
                 </li>
                 <li>
@@ -142,7 +142,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/support" className="text-gray-400 hover:text-white transition-colors">
-                    Helpem Mifala (Support Us)
+                    Support Us (Helpem Mifala)
                   </Link>
                 </li>
                 <li>
