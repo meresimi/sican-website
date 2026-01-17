@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
-      {/* Newsletter Section */}
+      {/* Newsletter Section - FIXED FormSubmit */}
       <div className="bg-gradient-to-r from-ocean to-lagoon py-12">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
@@ -20,6 +20,7 @@ export default function Footer() {
               method="POST"
               className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
             >
+              {/* Email Input */}
               <input 
                 type="email" 
                 name="email"
@@ -27,9 +28,16 @@ export default function Footer() {
                 required
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white"
               />
+              
+              {/* Hidden fields - IMPORTANT for FormSubmit */}
               <input type="hidden" name="_subject" value="New SICAN Newsletter Subscription" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="text" name="_honey" style={{display: 'none'}} />
+              <input type="hidden" name="_next" value="https://sican-website.vercel.app/thank-you" />
+              <input type="hidden" name="_autoresponse" value="Thank you for subscribing to SICAN updates! We'll keep you informed about our climate action work." />
+              
+              {/* Anti-spam honeypot */}
+              <input type="text" name="_honey" style={{display: 'none'}} tabIndex={-1} autoComplete="off" />
+              
+              {/* Submit Button */}
               <button 
                 type="submit"
                 className="btn-primary bg-white text-ocean hover:bg-gray-100 whitespace-nowrap px-8"
@@ -37,14 +45,19 @@ export default function Footer() {
                 Subscribe <span className="text-xs italic">(Saenem)</span> →
               </button>
             </form>
+            
             <p className="text-xs text-blue-200 mt-3">
               We'll notify you when new content is published. Unsubscribe anytime.
+            </p>
+            
+            <p className="text-xs text-blue-100 mt-2 italic">
+              Note: First-time setup may require email verification
             </p>
           </div>
         </div>
       </div>
 
-      {/* Main Footer - LIGHTER BACKGROUND FOR BANNER */}
+      {/* Main Footer */}
       <div className="border-t border-gray-700 py-12 bg-gray-800">
         <div className="container-custom">
           <div className="grid md:grid-cols-4 gap-8">
