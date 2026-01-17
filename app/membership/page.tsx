@@ -10,7 +10,8 @@ export default function MembershipPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-ocean via-ocean-light to-lagoon text-white py-20">
         <div className="container-custom">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Join SICAN (Kam Joinim Mifala)</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-2">Join SICAN</h1>
+          <p className="text-lg italic text-blue-100 mb-4">(Kam Joinim Mifala)</p>
           <p className="text-xl text-blue-100 max-w-3xl">
             Become part of Solomon Islands' leading climate action network. Together, we protect our islands and build a sustainable future.
           </p>
@@ -37,12 +38,16 @@ export default function MembershipPage() {
                 For NGOs, CBOs, faith-based organizations, and institutions committed to climate action.
               </p>
               
-              <h4 className="font-bold mb-2">Requirements:</h4>
+              <h4 className="font-bold mb-3">Benefits:</h4>
               <ul className="text-sm text-gray-700 mb-6 space-y-2">
-                <li>✓ Registered organization in Solomon Islands</li>
-                <li>✓ Climate-related mission or activities</li>
-                <li>✓ Commitment to SICAN values</li>
-                <li>✓ Active participation in network</li>
+                <li>✓ Voting rights in SICAN decisions</li>
+                <li>✓ Representation at regional/international forums</li>
+                <li>✓ Access to capacity building trainings</li>
+                <li>✓ Climate finance tracking resources</li>
+                <li>✓ Networking with other member organizations</li>
+                <li>✓ SICAN updates and newsletters</li>
+                <li>✓ Attend all public events and meetings</li>
+                <li>✓ Access to advocacy resources</li>
               </ul>
 
               <div className="space-y-3">
@@ -51,7 +56,7 @@ export default function MembershipPage() {
                   download
                   className="block w-full btn-primary text-center"
                 >
-                  📥 Download Form (Daonlodim Fom)
+                  📥 Download Form <span className="text-xs italic">(Daonlodim Fom)</span>
                 </a>
                 <Link 
                   href="/contact"
@@ -75,12 +80,16 @@ export default function MembershipPage() {
                 For passionate individuals who want to contribute to climate action.
               </p>
               
-              <h4 className="font-bold mb-2">Requirements:</h4>
+              <h4 className="font-bold mb-3">Benefits:</h4>
               <ul className="text-sm text-gray-700 mb-6 space-y-2">
-                <li>✓ Solomon Islands citizen or resident</li>
-                <li>✓ Interest in climate change issues</li>
-                <li>✓ Willingness to volunteer time/skills</li>
-                <li>✓ Support SICAN's mission</li>
+                <li>✓ Voting rights in SICAN decisions</li>
+                <li>✓ Participate in working groups</li>
+                <li>✓ Access to capacity building trainings</li>
+                <li>✓ Networking opportunities</li>
+                <li>✓ SICAN updates and newsletters</li>
+                <li>✓ Attend all public events and meetings</li>
+                <li>✓ Access to resources and materials</li>
+                <li>✓ Volunteer opportunities</li>
               </ul>
 
               <div className="space-y-3">
@@ -89,7 +98,7 @@ export default function MembershipPage() {
                   download
                   className="block w-full btn-primary text-center"
                 >
-                  📥 Download Form (Daonlodim Fom)
+                  📥 Download Form <span className="text-xs italic">(Daonlodim Fom)</span>
                 </a>
                 <Link 
                   href="/contact"
@@ -113,11 +122,11 @@ export default function MembershipPage() {
                 Stay informed and support SICAN without full membership commitments.
               </p>
               
-              <h4 className="font-bold mb-2">Benefits:</h4>
+              <h4 className="font-bold mb-3">Benefits:</h4>
               <ul className="text-sm text-gray-700 mb-6 space-y-2">
-                <li>✓ Receive SICAN updates</li>
-                <li>✓ Attend public events</li>
-                <li>✓ Access resources</li>
+                <li>✓ Receive SICAN updates and newsletters</li>
+                <li>✓ Attend public events and meetings</li>
+                <li>✓ Access to resources and materials</li>
                 <li>✓ Volunteer opportunities</li>
               </ul>
 
@@ -132,7 +141,8 @@ export default function MembershipPage() {
 
           {/* CTA */}
           <div className="mt-12 text-center bg-blue-50 rounded-lg p-8">
-            <h3 className="text-2xl font-bold mb-4">Ready to Join? (Redi fo Joinim?)</h3>
+            <h3 className="text-2xl font-bold mb-2">Ready to Join?</h3>
+            <p className="text-sm italic text-gray-600 mb-4">(Redi fo Joinim?)</p>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
               Download the appropriate membership form, fill it out, and send it to us. 
               We'll review your application and get back to you within 5 business days.
@@ -142,7 +152,7 @@ export default function MembershipPage() {
                 Contact Us →
               </Link>
               <Link href="/about" className="btn-outline border-ocean text-ocean hover:bg-ocean hover:text-white">
-                Learn More About SICAN (Faen Aot Moa)
+                Learn More About SICAN <span className="text-xs italic">(Faen Aot Moa)</span>
               </Link>
             </div>
           </div>

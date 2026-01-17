@@ -8,9 +8,11 @@ export default function Footer() {
       <div className="bg-gradient-to-r from-ocean to-lagoon py-12">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4">Stay Updated on Our Climate Work</h3>
-            <p className="text-blue-100 mb-6">
-              Subscribe to receive updates when we publish new articles, events, and climate action news.
+            <h3 className="text-2xl font-bold mb-2 text-white drop-shadow-md">
+              Stay Updated on Our Climate Work
+            </h3>
+            <p className="text-sm italic text-blue-100 mb-6">
+              (Stap Save Long Waka Blong Mifala)
             </p>
             
             <form 
@@ -26,13 +28,13 @@ export default function Footer() {
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white"
               />
               <input type="hidden" name="_subject" value="New SICAN Newsletter Subscription" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="https://sican-website.vercel.app/thank-you" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" style={{display: 'none'}} />
               <button 
                 type="submit"
                 className="btn-primary bg-white text-ocean hover:bg-gray-100 whitespace-nowrap px-8"
               >
-                Subscribe (Saenem Nem Blong Yu) →
+                Subscribe <span className="text-xs italic">(Saenem)</span> →
               </button>
             </form>
             <p className="text-xs text-blue-200 mt-3">
@@ -42,14 +44,14 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="border-t border-gray-800 py-12">
+      {/* Main Footer - LIGHTER BACKGROUND FOR BANNER */}
+      <div className="border-t border-gray-700 py-12 bg-gray-800">
         <div className="container-custom">
           <div className="grid md:grid-cols-4 gap-8">
             
             {/* About Column with Banner */}
             <div className="md:col-span-2">
-              <div className="mb-4">
+              <div className="mb-4 bg-white rounded-lg p-3 inline-block">
                 <Image
                   src="/images/sican-banner2.png"
                   alt="SICAN Banner"
@@ -58,7 +60,7 @@ export default function Footer() {
                   className="h-16 w-auto"
                 />
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              <p className="text-gray-300 text-sm leading-relaxed mb-4">
                 Solomon Islands Climate Action Network - Working together for climate justice. 
                 A network of organizations and individuals committed to protecting our islands 
                 from climate change impacts.
@@ -99,27 +101,27 @@ export default function Footer() {
               <h4 className="font-bold text-lg mb-4">Quick Links</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
                     About SICAN
                   </Link>
                 </li>
                 <li>
-                  <Link href="/our-story" className="text-gray-400 hover:text-white transition-colors">
-                    Our Story (Stori Blo Mifala)
+                  <Link href="/our-story" className="text-gray-300 hover:text-white transition-colors">
+                    Our Story <span className="text-xs italic">(Stori Blo Mifala)</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/work" className="text-gray-400 hover:text-white transition-colors">
-                    Our Work (Waka Mifala Duim)
+                  <Link href="/work" className="text-gray-300 hover:text-white transition-colors">
+                    Our Work <span className="text-xs italic">(Waka Mifala Duim)</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/impact" className="text-gray-400 hover:text-white transition-colors">
-                    Our Impact (Waka Wea Mifala Mekem)
+                  <Link href="/impact" className="text-gray-300 hover:text-white transition-colors">
+                    Our Impact <span className="text-xs italic">(Waka Wea Mifala Mekem)</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/news" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="/news" className="text-gray-300 hover:text-white transition-colors">
                     News & Updates
                   </Link>
                 </li>
@@ -128,25 +130,25 @@ export default function Footer() {
 
             {/* Get Involved */}
             <div>
-              <h4 className="font-bold text-lg mb-4">Get Involved (Joinim Mifala)</h4>
+              <h4 className="font-bold text-lg mb-4">Get Involved <span className="text-xs italic">(Joinim Mifala)</span></h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/membership" className="text-gray-400 hover:text-white transition-colors">
-                    Membership (Membasip)
+                  <Link href="/membership" className="text-gray-300 hover:text-white transition-colors">
+                    Membership <span className="text-xs italic">(Membasip)</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/get-involved" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="/get-involved" className="text-gray-300 hover:text-white transition-colors">
                     Volunteer
                   </Link>
                 </li>
                 <li>
-                  <Link href="/support" className="text-gray-400 hover:text-white transition-colors">
-                    Support Us (Helpem Mifala)
+                  <Link href="/support" className="text-gray-300 hover:text-white transition-colors">
+                    Support Us <span className="text-xs italic">(Helpem Mifala)</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
                     Contact Us
                   </Link>
                 </li>
@@ -155,7 +157,7 @@ export default function Footer() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
             <p>© {new Date().getFullYear()} SICAN. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <Link href="/contact" className="hover:text-white transition-colors">

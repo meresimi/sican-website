@@ -7,110 +7,99 @@ import Image from 'next/image'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
   return (
-    <header className="bg-ocean shadow-lg sticky top-0 z-50">
-      {/* Remove container-custom padding for mobile edge-to-edge layout */}
-      <nav className="px-0 md:px-4 lg:px-8 max-w-7xl mx-auto">
-        <div className="flex items-center justify-between h-20 md:h-24 lg:h-28 relative">
-          
-          {/* LEFT: SICAN Logo - 3px from left screen edge on mobile */}
-          <Link href="/" className="z-20 ml-[3px] md:ml-4">
-            <Image
-              src="/images/sican-icon.svg"
-              alt="SICAN Logo"
-              width={80}
-              height={80}
-              className="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter drop-shadow-md hover:scale-105 transition-transform"
-              priority
-            />
+    <header className="bg-ocean shadow-md sticky top-0 z-50">
+      <nav className="px-0 md:px-4 lg:px-8 max-w-7xl mx-auto h-20 md:h-24 lg:h-28 flex items-center justify-between">
+        
+        {/* Logo */}
+        <Link href="/" className="flex-shrink-0 ml-[3px] md:ml-4">
+          <Image
+            src="/images/sican-icon.svg"
+            alt="SICAN Logo"
+            width={64}
+            height={64}
+            className="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24"
+          />
+        </Link>
+
+        {/* Centered Text */}
+        <h1 
+          className="absolute left-1/2 transform -translate-x-1/2 text-5xl md:text-6xl lg:text-7xl font-bold text-white"
+          style={{
+            fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif',
+            textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+            letterSpacing: '0.1em'
+          }}
+        >
+          SICAN
+        </h1>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-6 mr-4">
+          <Link href="/" className="text-white hover:text-blue-200 transition-colors font-medium">
+            Home
           </Link>
-
-          {/* CENTER: Large "SICAN" Text - Always centered */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-wider font-heading drop-shadow-lg" style={{
-              fontFamily: 'Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif',
-              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-              letterSpacing: '0.1em'
-            }}>
-              SICAN
-            </h1>
-          </div>
-
-          {/* RIGHT: Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 z-20 mr-4">
-            <Link 
-              href="/" 
-              className="text-white hover:text-blue-200 transition-colors font-medium"
-            >
-              Home
-            </Link>
-            <Link 
-              href="/about" 
-              className="text-white hover:text-blue-200 transition-colors font-medium"
-            >
-              About
-            </Link>
-            <Link 
-              href="/work" 
-              className="text-white hover:text-blue-200 transition-colors font-medium"
-            >
-              Our Work
-            </Link>
-            <Link 
-              href="/contact" 
-              className="text-white hover:text-blue-200 transition-colors font-medium"
-            >
-              Contact
-            </Link>
-          </div>
-
-          {/* RIGHT: Hamburger Menu - 3px from right screen edge on mobile */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden z-20 p-2 rounded-md hover:bg-ocean-dark transition-colors mr-[3px]"
-            aria-label="Toggle menu"
-          >
-            <div className="flex flex-col gap-1.5">
-              <span className="block w-8 h-1 bg-white rounded"></span>
-              <span className="block w-8 h-1 bg-white rounded"></span>
-              <span className="block w-8 h-1 bg-white rounded"></span>
-            </div>
-          </button>
+          <Link href="/about" className="text-white hover:text-blue-200 transition-colors font-medium">
+            About
+          </Link>
+          <Link href="/work" className="text-white hover:text-blue-200 transition-colors font-medium">
+            Our Work
+          </Link>
+          <Link href="/impact" className="text-white hover:text-blue-200 transition-colors font-medium">
+            Our Impact
+          </Link>
+          <Link href="/contact" className="text-white hover:text-blue-200 transition-colors font-medium">
+            Contact
+          </Link>
         </div>
 
-        {/* Mobile Menu Dropdown */}
+        {/* Mobile Hamburger Menu */}
+        <button 
+          className="md:hidden flex flex-col gap-1.5 mr-[3px] z-50"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className="block w-8 h-1 bg-white rounded"></span>
+          <span className="block w-8 h-1 bg-white rounded"></span>
+          <span className="block w-8 h-1 bg-white rounded"></span>
+        </button>
+
+        {/* Mobile Dropdown Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-ocean-dark border-t border-ocean-light">
-            <div className="flex flex-col space-y-1 py-4">
-              <Link
-                href="/"
-                onClick={toggleMenu}
-                className="px-6 py-3 text-white hover:bg-ocean hover:text-blue-100 transition-colors text-lg"
+          <div className="absolute top-20 md:top-24 left-0 right-0 bg-ocean-dark shadow-lg md:hidden">
+            <div className="flex flex-col py-4">
+              <Link 
+                href="/" 
+                className="px-6 py-3 text-white hover:bg-ocean transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
-              <Link
-                href="/about"
-                onClick={toggleMenu}
-                className="px-6 py-3 text-white hover:bg-ocean hover:text-blue-100 transition-colors text-lg"
+              <Link 
+                href="/about" 
+                className="px-6 py-3 text-white hover:bg-ocean transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
-              <Link
-                href="/work"
-                onClick={toggleMenu}
-                className="px-6 py-3 text-white hover:bg-ocean hover:text-blue-100 transition-colors text-lg"
+              <Link 
+                href="/work" 
+                className="px-6 py-3 text-white hover:bg-ocean transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Our Work
               </Link>
-              <Link
-                href="/contact"
-                onClick={toggleMenu}
-                className="px-6 py-3 text-white hover:bg-ocean hover:text-blue-100 transition-colors text-lg"
+              <Link 
+                href="/impact" 
+                className="px-6 py-3 text-white hover:bg-ocean transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Our Impact
+              </Link>
+              <Link 
+                href="/contact" 
+                className="px-6 py-3 text-white hover:bg-ocean transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </Link>

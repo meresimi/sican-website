@@ -70,7 +70,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Location (if available) */}
+              {/* Location with Google Maps Link */}
               <div className="mb-8 flex items-start">
                 <div className="bg-coral text-white rounded-full p-4 mr-4 flex-shrink-0">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,13 +80,21 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">Location</h3>
-                  <p className="text-gray-700">
+                  <a 
+                    href="https://www.google.com/maps?q=-9.434737,159.961507"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-ocean hover:text-ocean-dark underline"
+                  >
+                    Ground Floor (East Wing), Unit 2,<br />
+                    St. Agnes Mother's Union Transit House,<br />
                     Honiara, Solomon Islands
-                  </p>
+                  </a>
+                  <p className="text-xs text-gray-500 mt-2">📍 Click to open in maps</p>
                 </div>
               </div>
 
-              {/* Office Hours (if applicable) */}
+              {/* Office Hours */}
               <div className="bg-blue-50 rounded-lg p-6">
                 <h3 className="font-bold text-lg mb-3">Office Hours</h3>
                 <p className="text-gray-700">
@@ -105,7 +113,6 @@ export default function ContactPage() {
                 method="POST"
                 className="space-y-6"
               >
-                {/* Name */}
                 <div>
                   <label htmlFor="name" className="block font-medium mb-2">
                     Your Name <span className="text-red-500">*</span>
@@ -120,7 +127,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-                {/* Email */}
                 <div>
                   <label htmlFor="email" className="block font-medium mb-2">
                     Your Email <span className="text-red-500">*</span>
@@ -135,7 +141,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-                {/* Phone (optional) */}
                 <div>
                   <label htmlFor="phone" className="block font-medium mb-2">
                     Phone Number (Optional)
@@ -149,7 +154,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-                {/* Subject */}
                 <div>
                   <label htmlFor="subject" className="block font-medium mb-2">
                     Subject <span className="text-red-500">*</span>
@@ -170,7 +174,6 @@ export default function ContactPage() {
                   </select>
                 </div>
 
-                {/* Message */}
                 <div>
                   <label htmlFor="message" className="block font-medium mb-2">
                     Your Message <span className="text-red-500">*</span>
@@ -185,12 +188,9 @@ export default function ContactPage() {
                   />
                 </div>
 
-                {/* Hidden fields for FormSubmit */}
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://sican-website.vercel.app/thank-you" />
+                <input type="hidden" name="_template" value="table" />
                 <input type="text" name="_honey" style={{display: 'none'}} />
 
-                {/* Submit Button */}
                 <button 
                   type="submit"
                   className="btn-primary w-full"
@@ -203,31 +203,6 @@ export default function ContactPage() {
                 </p>
               </form>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Links Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <h2 className="text-3xl font-heading font-bold text-center mb-12">Quick Links</h2>
-          <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <a href="/membership" className="bg-ocean text-white rounded-lg p-6 text-center hover:bg-ocean-dark transition-colors">
-              <div className="text-3xl mb-3">🤝</div>
-              <div className="font-bold">Join SICAN</div>
-            </a>
-            <a href="/support" className="bg-forest text-white rounded-lg p-6 text-center hover:bg-emerald-700 transition-colors">
-              <div className="text-3xl mb-3">💝</div>
-              <div className="font-bold">Support Us</div>
-            </a>
-            <a href="/work" className="bg-coral text-white rounded-lg p-6 text-center hover:bg-orange-700 transition-colors">
-              <div className="text-3xl mb-3">🌍</div>
-              <div className="font-bold">Our Work</div>
-            </a>
-            <a href="/news" className="bg-purple-600 text-white rounded-lg p-6 text-center hover:bg-purple-700 transition-colors">
-              <div className="text-3xl mb-3">📰</div>
-              <div className="font-bold">Latest News</div>
-            </a>
           </div>
         </div>
       </section>
