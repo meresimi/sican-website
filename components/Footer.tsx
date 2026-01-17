@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
-      {/* Newsletter Section - FIXED FormSubmit */}
+      {/* Newsletter Section - TESTING with simionabobai@gmail.com */}
       <div className="bg-gradient-to-r from-ocean to-lagoon py-12">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
@@ -16,7 +16,7 @@ export default function Footer() {
             </p>
             
             <form 
-              action="https://formsubmit.co/sicannetwork@gmail.com" 
+              action="https://formsubmit.co/simionabobai@gmail.com" 
               method="POST"
               className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
             >
@@ -29,8 +29,8 @@ export default function Footer() {
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white"
               />
               
-              {/* Hidden fields - IMPORTANT for FormSubmit */}
-              <input type="hidden" name="_subject" value="New SICAN Newsletter Subscription" />
+              {/* Hidden fields */}
+              <input type="hidden" name="_subject" value="SICAN Newsletter Subscription TEST" />
               <input type="hidden" name="_next" value="https://sican-website.vercel.app/thank-you" />
               <input type="hidden" name="_autoresponse" value="Thank you for subscribing to SICAN updates! We'll keep you informed about our climate action work." />
               
@@ -47,11 +47,11 @@ export default function Footer() {
             </form>
             
             <p className="text-xs text-blue-200 mt-3">
-              We'll notify you when new content is published. Unsubscribe anytime.
+              We'll notify you when new content is published.
             </p>
             
-            <p className="text-xs text-blue-100 mt-2 italic">
-              Note: First-time setup may require email verification
+            <p className="text-xs text-yellow-200 mt-2 font-semibold">
+              🧪 TESTING MODE: Emails going to simionabobai@gmail.com
             </p>
           </div>
         </div>
