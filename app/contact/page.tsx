@@ -188,7 +188,7 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" value="https://sican-website.vercel.app/thank-you" />
                 <input type="text" name="_honey" style={{display: 'none'}} />
 
                 <button 
